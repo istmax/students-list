@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Список студентов</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container text-center">
+      <h2 class="h2 mb-4">Добавление нового студента</h2>
+      <form id="form-add-student" action="#" class="form text-center">
+        <input
+          id="surname"
+          class="form-control mb-3"
+          type="text"
+          placeholder="Введите Фамилию"
+          required
+        />
+        <input
+          id="name"
+          class="form-control mb-3"
+          type="text"
+          placeholder="Введите Имя"
+          required
+        />
+        <input
+          id="patronymic"
+          class="form-control mb-3"
+          type="text"
+          placeholder="Введите Отчество"
+          required
+        />
+        <input
+          id="faculty"
+          class="form-control mb-3"
+          type="text"
+          placeholder="Введите название факультета"
+          required
+        />
+        <input
+          id="birthDate"
+          class="form-control mb-3"
+          type="text"
+          onfocus="(this.type = 'date')"
+          onblur="if(this.value === ''){this.type='text'}"
+          placeholder="Введите дату рождения"
+          required
+        />
+        <input
+          id="learningYears"
+          class="form-control mb-3"
+          type="number"
+          placeholder="Введите год начала обучения"
+          required
+        />
+        <button class="btn btn-primary mb-4" type="submit">
+          Добавить студента
+        </button>
+      </form>
+      <h2 class="h2 mb-4">Фильтрация</h2>
+      <form id="form-filter" action="#" class="form text-center">
+        <input
+          id="filter-fio"
+          class="form-control mb-3"
+          type="text"
+          placeholder="Поиск по Ф.И.О."
+        />
+        <input
+          id="filter-faculty"
+          class="form-control mb-3"
+          type="text"
+          placeholder="Поиск по названию факультета"
+        />
+        <input
+          id="filter-birth-date"
+          class="form-control mb-3"
+          type="text"
+          onfocus="(this.type = 'date')"
+          onblur="if(this.value === ''){this.type='text'}"
+          placeholder="Поиск по дате рождения"
+        />
+        <input
+          id="filter-learning-years"
+          class="form-control mb-4"
+          type="number"
+          placeholder="Поиск по году начала обучения"
+        />
+      </form>
+      <h1 class="h2 mb-4">Список студентов</h1>
+      <table class="table table-bordered text-center">
+        <tbody class="tbody"></tbody>
+      </table>
+    </div>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
